@@ -1,0 +1,234 @@
+<!-- <section class="banner">
+
+</section> -->
+<section class="hero-wrap">
+    <owl-carousel-o [options]="customOptions" #slideMain>
+        <ng-container *ngFor="let slide of slides">
+            <ng-template class="slide" carouselSlide>
+                <div class="v-img-slide" style="background-image: url({{slide.image}})">
+
+                </div>
+            </ng-template>
+        </ng-container>
+
+    </owl-carousel-o>
+    <div class="overlay">
+
+    </div>
+    <div class="home-container">
+        <div class="intro-container anm-fadeInUp">
+            <p class="p-logo">TQ Construction</p>
+            <p class="p-service">Design & Build</p>
+            <p>Sologan của công ty</p>
+        </div>
+    </div>
+
+</section>
+<section class="service">
+    <div class="container">
+        <div class="service-content ftco-animate anm-fadeInUp">
+            <div class="service-one">
+                <div class="service-one-block">
+                    <div class="icon">
+                        <img src="../../../assets/img/static/layer.svg">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Tiêu chí công ty</h3>
+                        <p>Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty,
+                            Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty, </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-one">
+                <div class="service-one-block">
+                    <div class="icon">
+                        <img src="../../../assets/img/static/layer.svg">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Tiêu chí công ty</h3>
+                        <p>Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty,
+                            Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty, </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-one">
+                <div class="service-one-block">
+                    <div class="icon">
+                        <img src="../../../assets/img/static/layer.svg">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Tiêu chí công ty</h3>
+                        <p>Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty,
+                            Đưa ra 3 tiêu chí của công ty, Đưa ra 3 tiêu chí của công ty, </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="welcome" #welcome>
+    <div class="container">
+        <div class="welcome-content">
+            <div class="welcome-about">
+
+            </div>
+            <div class="welcome-detail {{ homeService.scrollWelcome ? 'anm-fadeInUp' : ''}}">
+                <div class="welcome-intro">
+                    <div class="content">
+                        <span class="heading">Welcome</span>
+                        <h2>Bắt đầu thành lập từ 2020</h2>
+                        <p>Giới thiệu về công ty, chém nhiệt tình vào
+                            ..........................................................................................................................
+                        </p>
+                        <p>Giới thiệu về công ty, chém nhiệt tình vào
+                            ...........................................................................................
+                        </p>
+                        <p>Giới thiệu về công ty, chém nhiệt tình vào
+                            ........................................................................................</p>
+                    </div>
+                </div>
+                <div class="welcome-result">
+                    <div class="welcome-rs-block">
+                        <div class="welcome-rs-content">
+                            <div class="text">
+                                <strong appCountUp count="100" timming="10" [start]="homeService.scrollWelcome" class="number">0</strong>
+                                <span>Năm kinh nghiệm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-rs-block">
+                        <div class="welcome-rs-content">
+                            <div class="text">
+                                <strong appCountUp count="100" timming="1" [start]="homeService.scrollWelcome" class="number">0</strong>
+                                <span>Dự án thành công</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-rs-block">
+                        <div class="welcome-rs-content">
+                            <div class="text">
+                                <strong appCountUp count="100" timming="10" [start]="homeService.scrollWelcome" class="number">0</strong>
+                                <span>Khách hàng hài lòng</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-rs-block">
+                        <div class="welcome-rs-content">
+                            <div class="text">
+                                <strong appCountUp count="100" timming="1" [start]="homeService.scrollWelcome" class="number">0</strong>
+                                <span>Thiết kế kiến trúc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="project" #project>
+    <div class="container-flux">
+        <div class="intro">
+            <div class="content {{ homeService.scrollProject ? 'anm-fadeInUp' : ''}}">
+                <span class="heading">Thành tựu</span>
+                <h2>Dự án của chúng tôi</h2>
+                <p>Giới thiệu sơ qua về kết quả chung</p>
+            </div>
+        </div>
+        <div class="product">
+            <div class="content {{ homeService.scrollProject ? 'anm-fadeInUp' : ''}}">
+                <owl-carousel-o [options]="customOptionsProject" #slideMain>
+                    <ng-container *ngFor="let project of projects">
+                        <ng-template carouselSlide>
+                            <div class="project-items">
+                                <div class="v-img-project">
+                                    <img src="{{project.img}}">
+                                </div>
+                                <div class="text">
+                                    <h3>{{project.name}}</h3>
+                                    <span>{{project.step}}</span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="employee" #employee>
+    <div class="container-flux">
+        <div class="intro">
+            <div class="content {{ homeService.scrollEmployee ? 'anm-fadeInUp' : ''}}">
+                <span class="heading">Nhân viên</span>
+                <h2>Đằng sau sự thành công</h2>
+                <p>Giới thiệu tổng quát về nhân viên</p>
+            </div>
+        </div>
+        <div class="employees">
+            <div class="content {{ homeService.scrollEmployee ? 'anm-fadeInUp' : ''}}">
+                <div class="employee-detail" *ngFor="let em of employees">
+                    <div class="img-employee">
+                        <div class="bgr-employee" style="background-image: url({{em.img}});"></div>
+                    </div>
+                    <div class="intro-employee">
+                        <div>
+                            <span class="position mb-2">{{em.level}}</span>
+                            <h3 class="mb-4">{{em.name}}</h3>
+                            <div class="faded">
+                                <p>{{em.des}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" #contact>
+    <div class="container">
+        <div class="intro">
+            <div class="content {{ homeService.scrollContact ? 'anm-fadeInUp' : ''}}">
+                <span class="heading">Contact</span>
+                <h2>Thông tin của chúng tôi</h2>
+                <p>Liên hệ với chúng tôi để có sự tư vấn chu đáo nhất!</p>
+            </div>
+        </div>
+        <div class="contact-content">
+            <div class="content">
+                <div class="contact-map">
+                    <google-map></google-map>
+                </div>
+                <div class="contact-info">
+                    <div class="form {{ homeService.scrollContact ? 'anm-fadeInUp' : ''}}">
+                        <h3>Thông tin công ty</h3>
+                        <div class="inline">
+                            <div><img src="../../../assets/img/static/address.svg"></div>
+                            <span>Cẩm Thành, Cẩm Xuyên, Hà Tĩnh</span>
+                        </div>
+                        <div class="inline">
+                            <div><img src="../../../assets/img/static/phone.svg"></div>
+                            <span>0123456789</span>
+                        </div>
+                        <div class="inline">
+                            <div><img src="../../../assets/img/static/email.svg"></div>
+                            <span>email@gmail.com</span>
+                        </div>
+                        <h3>Thời gian làm việc</h3>
+                        <div class="inline">
+                            <div><img src="../../../assets/img/static/time.svg"></div>
+                            <span> Thứ 2 - 6: </span>
+                            <span>8h00 - 17h00</span>
+                        </div>
+                        <div class="inline">
+                            <div><img src="../../../assets/img/static/time.svg"></div>
+                            <span> Thứ 7: </span>
+                            <span>8h00 - 12h00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

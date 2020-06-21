@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//animate
+.anm-fadeInUp {
+    position: relative;
+    animation-direction: alternate;
+    animation: bottomToTop 1s;
+}
+
+@keyframes bottomToTop {
+    0% {
+        bottom: calc(-100vh / 3);
+    }
+    100% {
+        bottom: 0;
+    }
+}
